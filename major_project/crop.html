@@ -1,0 +1,30 @@
+{% extends "major_project/base.html" %}
+
+{% load static %}
+
+{% block body_block %}
+
+<div class="form">
+        <form action="result">
+          {% csrf_token %}
+          <fieldset>
+            <legend id="legend">Fill the details</legend>
+            <label for="nitrogen">Nitrogen : </label>
+            <input type="text" name="nitrogen"><br><br>
+            <label for="potasium">Potasium : </label>
+            <input type="text" name="Potasium"><br><br>
+            <label for="phosphorus">Phosphorus : </label>
+            <input type="text" name="Phosphorus"><br><br>
+            <label for="tempreature">Tempreature : </label>
+            <input type="text" name="Tempreature"><br><br>
+            <label for="humidity">Humidity : </label>
+            <input type="text" name="Humidity"><br><br>
+            <label for="ph">PH : </label>
+            <input type="text" name="ph"><br><br>
+            <label for="rainfall">Rainfall : </label>
+            <input type="text" name="rainfall"><br><br>
+            <button type="submit" >Submit</button>
+          </fieldset>
+        </form>        
+      </div>
+{% endblock %}
